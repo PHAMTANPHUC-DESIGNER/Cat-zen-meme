@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Play sound
         playMoSound();
 
-        // Animation for cat nod head 3D
+        // Animation for cat nod head 3D (bowing)
         catImage.classList.add('cat-nod');
-        setTimeout(() => catImage.classList.remove('cat-nod'), 600);
+        setTimeout(() => catImage.classList.remove('cat-nod'), 800);
 
         // Shake mo
         moButton.classList.add('shake');

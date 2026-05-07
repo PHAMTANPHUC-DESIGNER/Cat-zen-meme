@@ -63,6 +63,21 @@ body {
     100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
 }
 
+@keyframes breathing {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.08); opacity: 1; }
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.2), inset 0 0 30px rgba(212, 175, 55, 0.1); }
+    50% { box-shadow: 0 0 50px rgba(212, 175, 55, 0.4), inset 0 0 50px rgba(212, 175, 55, 0.15); }
+}
+
 /* Main Layout */
 .app-container {
     width: 90%;
@@ -119,6 +134,7 @@ body {
     z-index: 2;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+    animation: breathing 5s ease-in-out infinite, glowPulse 5s ease-in-out infinite;
 }
 
 #cat-image {
@@ -145,7 +161,7 @@ body {
     height: 280px;
     background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
     border-radius: 50%;
-    animation: pulse 4s infinite ease-in-out;
+    animation: breathing 5s infinite ease-in-out, pulse 5s infinite ease-in-out;
 }
 
 @keyframes pulse {
@@ -154,15 +170,15 @@ body {
 }
 
 @keyframes catNod {
-    0%, 100% { transform: perspective(500px) rotateX(0deg); }
-    20% { transform: perspective(500px) rotateX(-25deg); }
-    40% { transform: perspective(500px) rotateX(-12deg); }
-    60% { transform: perspective(500px) rotateX(-28deg); }
-    80% { transform: perspective(500px) rotateX(-8deg); }
+    0%, 100% { transform: perspective(500px) rotateX(0deg) scale(1); }
+    15% { transform: perspective(500px) rotateX(-20deg) scale(1.02); }
+    30% { transform: perspective(500px) rotateX(-28deg) scale(1.05); }
+    50% { transform: perspective(500px) rotateX(-20deg) scale(1.03); }
+    70% { transform: perspective(500px) rotateX(-10deg) scale(1.01); }
 }
 
 .cat-nod {
-    animation: catNod 0.6s ease-in-out !important;
+    animation: catNod 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
 }
 
 .mantra-container {
@@ -214,10 +230,12 @@ body {
     flex-direction: column;
     align-items: center;
     transition: transform 0.1s;
+    animation: floating 3s ease-in-out infinite;
 }
 
 .mo-container:active {
     transform: scale(0.95);
+    animation: none;
 }
 
 .mo-icon {
