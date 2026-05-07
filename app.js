@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Play sound
         playMoSound();
 
-        // Animation for cat
-        catImage.style.transform = 'scale(1.05)';
-        setTimeout(() => catImage.style.transform = 'scale(1)', 100);
+        // Animation for cat nod head 3D
+        catImage.classList.add('cat-nod');
+        setTimeout(() => catImage.classList.remove('cat-nod'), 600);
 
         // Shake mo
         moButton.classList.add('shake');
