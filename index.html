@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mèo Vô Tri Khấn Phật - Tích Công Đức Online</title>
+    <meta name="description" content="Ứng dụng tích công đức online cùng mèo vô tri. Tịnh tâm và thư giãn.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars-container" id="stars"></div>
+    <div class="lotus-container" id="lotus-petals"></div>
+
+    <main class="app-container">
+        <header class="header">
+            <h1 class="title">MÈO VÔ TRI <span class="accent">KHẤN PHẬT</span></h1>
+            <p class="subtitle">Tâm bất biến giữa dòng đời vạn biến</p>
+        </header>
+
+        <section class="cat-section">
+            <div class="aura"></div>
+            <div class="cat-frame">
+                <img src="cat.png" alt="Mèo Vô Tri Khấn Phật" id="cat-image">
+            </div>
+            <div class="mantra-container">
+                <p id="mantra-text">Nam mô A Di Đà Phật...</p>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stat-card">
+                <span class="label">Công Đức Hiện Tại</span>
+                <span id="merit-count" class="value">0</span>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="mo-container" id="mo-button">
+                <div class="mo-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#5D4037" stroke="#D4AF37" stroke-width="3"/>
+                        <path d="M20 50 Q 50 20 80 50 Q 50 80 20 50" fill="#3E2723" opacity="0.6"/>
+                        <circle cx="50" cy="50" r="10" fill="#D4AF37" opacity="0.8"/>
+                    </svg>
+                </div>
+                <span class="mo-label">GÕ MÕ TÍCH CÔNG ĐỨC</span>
+            </div>
+        </footer>
+    </main>
+
+    <div id="float-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
